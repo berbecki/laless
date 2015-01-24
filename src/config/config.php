@@ -4,7 +4,7 @@ return array(
 
     /*
     |--------------------------------------------------------------------------
-    | Lessy Origin and Destination
+    | Laless Origin and Destination
     |--------------------------------------------------------------------------
     |
     | The place where the the tree of less files will be loaded and where the

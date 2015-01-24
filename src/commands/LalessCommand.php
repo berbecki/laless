@@ -28,7 +28,7 @@ class LalessCommand extends Command {
     protected $app;
 
     /**
-     * Create a new Lessy command instance.
+     * Create a new Laless command instance.
      *
      * @param  Basset\Basset  $basset
      * @return void
@@ -47,7 +47,7 @@ class LalessCommand extends Command {
      */
     public function fire()
     {
-        $laless = new Lessy($this->app);
+        $laless = new Laless($this->app);
         $this->line("\n<comment>Laless ".LALESS_VERSION."</comment> <info>Compiling files...</info>");
         $laless->compileLessFiles( true );
         

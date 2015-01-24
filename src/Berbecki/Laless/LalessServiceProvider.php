@@ -21,12 +21,12 @@ class LalessServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		/**
-		 * Lessy will NOT run in production environment
+		 * Laless will NOT run in production environment
 		 */
 		if( $this->app->__get('env') != 'production'  || $this->app['config']->get('laless::force_compile') )
 		{
 			$this->package('berbecki/laless');
-			$laless = new Lessy($this->app);
+			$laless = new Laless($this->app);
 
 			// Compiles less file if manual_compile_only is not enabled
 			if (! $this->app['config']->get('laless::manual_compile_only'))
@@ -45,14 +45,14 @@ class LalessServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind('laless', function($app)
 		{
-		    return new Lessy($app);
+		    return new Laless($app);
 		});
 
 		$this->app['config']->package('berbecki/laless', __DIR__.'/../../config');
 
 		$this->app['command.laless.compile'] = $this->app->share(function($app)
 		{
-			return new LessyCommand($app);
+			return new LalessCommand($app);
 		});
 
 		$this->commands('command.laless.compile');

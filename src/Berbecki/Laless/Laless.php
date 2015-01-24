@@ -20,7 +20,7 @@ class Laless
     public $_app;
 
     /**
-     * Create a new Lessy instance.
+     * Create a new Laless instance.
      *
      * @param  Illuminate\Foundation\Application  $app
      */
