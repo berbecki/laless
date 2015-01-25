@@ -12,7 +12,6 @@
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "4.*",
-        "leafo/lessphp": "0.5.0",
 		"oyejorge/less.php": "~1.5"
     },
     "autoload": {
