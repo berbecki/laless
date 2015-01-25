@@ -26,7 +26,8 @@ return array(
     |
     */
 
-    'files_to_compilation'        	=> array(
+    // TODO - add file name engine
+	'files_to_compilation'        	=> array(
 		'base.less', 
 		'app.less'
 	),
