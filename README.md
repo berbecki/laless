@@ -14,14 +14,14 @@ Then, run in terminal the Composer update comand:
 
     $ composer.phar update
 
-In your `config/app.php` add line `'Berbecki\Laless\Laless\ServiceProvider'` to the end of the `$providers` array
+In your `config/app.php` add line `'Berbecki\Laless\ServiceProvider'` to the end of the `$providers` array
 
     'providers' => array(
 
         'Illuminate\Foundation\Providers\ArtisanServiceProvider',
         'Illuminate\Auth\AuthServiceProvider',
         ...
-        'Berbecki\Laless\Laless\ServiceProvider',
+        'Berbecki\Laless\ServiceProvider',
 
     ),
 
