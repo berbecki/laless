@@ -30,11 +30,6 @@ class Laless
         $this->lessc = new lessc;
     }
 
-    public function compileTree($origin, $destination)
-    {
-        $this->compileLessFiles(false, $origin, $destination);
-    }
-
     /**
      * Compiles the less files
      *
@@ -139,45 +134,6 @@ class Laless
         }
 
         return $tree;
-    }
-
-    /**
-     * Compiles one less file
-     *
-     * @param  bool  $verbose
-     * @return void
-     */
-    public function compileSingleFile( $filename, $verbose = false )
-    {
-        $root =        $this->_app['path'].'/';
-        $origin =      $this->_app['config']->get('laless::origin');
-        $destination = $this->_app['config']->get('laless::destination');
-
-        if( empty($origin) )
-            $origin = 'less';
-
-        if( empty($destination) )
-            $destination = '../public/assets/css';
-
-        $origin .= '/'.$filename;
-
-        if( $verbose )
-        {
-            print_r( 'LESS file: <app>/'.$origin."\n" );
-            print_r( 'Output to:  <app>/'.$destination."\n\n" );
-        }
-
-        $origin =      $root.$origin;
-        $destination = $root.$destination;
-
-        if ( ! is_dir($destination) )
-            mkdir($destination, 0775, true);
-
-        // Compile file
-        $this->lessc->compileFile(
-            $origin,
-            $destination.'/'.substr($filename,0,strrpos($filename,'.',-1)).'.css'
-        );
     }
     
     /**

@@ -12,9 +12,24 @@ return array(
     |
     */
 
-    'origin'        => 'less',
+    'origin'        				=> '../public/assets/less',
 
-    'destination'   => '../public/assets/css',
+    'destination'   				=> '../public/assets/css',
+	
+	
+	/*
+    |--------------------------------------------------------------------------
+    | Laless array of the files to compilation
+    |--------------------------------------------------------------------------
+    |
+    | Add file names to compilation
+    |
+    */
+
+    'files_to_compilation'        	=> array(
+		'base.less', 
+		'app.less'
+	),
 
 
     /*
@@ -31,7 +46,7 @@ return array(
     |
     */
 
-    'force_compile' => false,
+    'force_compile' 				=> false,
 
     /*
     |--------------------------------------------------------------------------
@@ -44,12 +59,12 @@ return array(
     |
     */
 
-    'manual_compile_only' => false,
+    'manual_compile_only' 			=> false,
 	
 	/*
-	 |--------------------------------------------------------------------------
+	|--------------------------------------------------------------------------
 	| Auto minify files in styles.css
 	|--------------------------------------------------------------------------
 	*/
-	'auto_minify' => true
+	'auto_minify' 					=> true
 );
