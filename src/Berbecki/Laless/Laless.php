@@ -107,7 +107,7 @@ class Laless
                     }
 
                     // Compile file
-                    $this->lessc->checkedCompile(
+                    $this->lessc->compileFile(
                         $origin.$offset.$filename,
                         $destiny.$offset.substr($filename,0,strrpos($filename,'.',-1)).'.css'
                     );
